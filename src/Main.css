@@ -1,0 +1,45 @@
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.multiselect {
+    
+    text-align:center;
+    margin: auto;
+     border: 1px solid;
+     width: 60%;
+     height: 30vh;
+     align-items: center;
+     justify-content: center;
+  -webkit-box-shadow: 0 8px 6px -6px rgb(110, 110, 199);
+	   -moz-box-shadow: 0 8px 6px -6px rgb(80, 65, 116);
+	        box-shadow: 0 8px 6px -6px rgb(84, 91, 183);
+            border-radius: 2%;
+            border-color: rgb(208, 231, 252);
+}
+
+.shipment_text {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+  padding-top: 5%;
+  color: midnightblue;
+  font-size: 40px;
+}
+
+.select_text {
+    color:midnightblue;
+    font-weight:bold;
+    font-size: large;
+}
+
+.shipment_results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
+    color: midnightblue;
+    font-size: medium;
+}
