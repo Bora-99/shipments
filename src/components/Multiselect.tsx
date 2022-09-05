@@ -1,12 +1,11 @@
-import React, { useState } from "react";
 import { MultiSelect } from "react-multi-select-component";
 interface IMultiselectProps {
   options: any;
   text: string;
   setSelectedAreas?: (item: any) => void;
-  setSelectedCompanies?: (item: any) => void;
+  setSelectedCountries?: (item: any) => void;
   selectedAreas?: any;
-  selectedCompanies?: any;
+  selectedCountries?: any;
 }
 interface IRow {
   areaId?: number;
@@ -18,24 +17,24 @@ const MultiSelectElement = ({
   options,
   text,
   setSelectedAreas,
-  setSelectedCompanies,
+  setSelectedCountries,
   selectedAreas,
-  selectedCompanies,
+  selectedCountries,
 }: IMultiselectProps) => {
-  const optionsTest = options.map((row: IRow) => {
+  const valuesOption = options.map((row: IRow) => {
     return {
       value: text === "Areas" ? row.areaId : row.companyId,
       label: text === "Areas" ? row.state : row.country,
     };
   });
+
   return (
     <div>
       <h1 className={"select_text"}>{text}</h1>
       <MultiSelect
-        className={"test"}
-        options={optionsTest}
-        value={selectedCompanies ? selectedCompanies : selectedAreas}
-        onChange={selectedCompanies ? setSelectedCompanies : setSelectedAreas}
+        options={valuesOption}
+        value={selectedCountries ? selectedCountries : selectedAreas}
+        onChange={selectedCountries ? setSelectedCountries : setSelectedAreas}
         labelledBy="Select"
       />
     </div>
